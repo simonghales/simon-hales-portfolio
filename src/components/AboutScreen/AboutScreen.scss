@@ -1,0 +1,11 @@
+@import "styles/tools/tools.layout";
+
+.AboutScreen
+{
+  height: 100vh;
+}
+
+.AboutScreen__content
+{
+  @include mainPadding;
+}

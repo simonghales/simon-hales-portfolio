@@ -1,0 +1,190 @@
+@import "styles/tools/tools.layout";
+
+.LandingScreen
+{
+  height:   100vh;
+  position: relative;
+}
+
+.LandingScreen__content
+{
+  @include mainPadding;
+  position: absolute;
+  top:      0;
+  left:     0;
+  right:    0;
+  bottom:   0;
+}
+
+.LandingScreen__introInfo
+{
+
+}
+
+.LandingScreen__introInfo__title
+{
+  color:        #282B2E;
+  font-size:    28px;
+  line-height:  32px;
+  margin-right: -38px; // to counteract down arrow
+
+  span
+  {
+    display: block;
+  }
+
+}
+
+.LandingScreen__introInfo__title__name
+{
+
+}
+
+.LandingScreen__introInfo__title__role
+{
+  font-weight: 300;
+  font-style:  italic;
+}
+
+.LandingScreen__socialLinks
+{
+  margin-top: 40px;
+}
+
+.LandingScreen__nextPreview
+{
+  position: absolute;
+  right:    70px;
+  bottom:   90px;
+
+}
+
+@keyframes animateDownArrow
+{
+  0%
+  {
+    transform: translateY(0) scale(0.5);
+    opacity:   1;
+  }
+  25%
+  {
+    //opacity:   0.5;
+    transform: translateY(12px) scale(1);
+  }
+  50%
+  {
+    //opacity: 0.5;
+  }
+  55%
+  {
+    opacity: 0.1;
+  }
+  60%
+  {
+    transform: translateY(36px) scale(0.85);
+    opacity:   0;
+  }
+  100%
+  {
+    transform: translateY(36px);
+    opacity:   0;
+  }
+}
+
+@keyframes animateDownArrowNudge
+{
+  0%, 25%, 40%, 85%, 100%
+  {
+    transform: translateY(0);
+  }
+  45%
+  {
+    transform: translateY(2px);
+  }
+}
+
+.LandingScreen__nextPreview__title
+{
+  font-size:      28px;
+  line-height:    32px;
+  font-weight:    300;
+  letter-spacing: 0.5px;
+  cursor:         pointer;
+
+  .LandingScreen__nextPreview__title__icons
+  {
+    display:       inline-block;
+    margin-left:   10px;
+    position:      relative;
+    padding-right: 28px;
+  }
+
+  svg
+  {
+    //width:       27px;
+    //height:      14.47px;
+    //margin-left: 10px;
+    fill:       #ACAFB1;
+    position:   absolute;
+    right:      0;
+    bottom:     -1px;
+    transition: fill 250ms ease;
+
+    path
+    {
+      fill: inherit;
+    }
+
+  }
+
+  &:hover
+  {
+
+    svg
+    {
+      fill: rgba(245, 77, 160, 0.64);
+    }
+
+  }
+
+}
+
+.LandingScreen__nextPreview__title__icons__line
+{
+
+  path
+  {
+    //stroke-dashoffset: -194px;
+    //stroke:            #ACAFB1;
+    //fill:              rgba(0, 0, 0, 0);
+    //stroke-dasharray:  205;
+    //stroke-width:      1px;
+    //transition:        stroke-dashoffset 300ms ease;
+    opacity:   0.5;
+    animation: animateDownArrow 3000ms ease infinite;
+  }
+
+  &:hover
+  {
+
+    path
+    {
+      stroke-dashoffset: -94px;
+    }
+
+  }
+
+}
+
+.LandingScreen__nextPreview__title__icons__mainAbove
+{
+  opacity:   0;
+  bottom:    12px;
+  animation: animateDownArrow 3000ms ease infinite;
+}
+
+.LandingScreen__nextPreview__title__icons__main
+{
+  //visibility: hidden;
+  //animation: animateDownArrowNudge 2000ms ease infinite;
+}

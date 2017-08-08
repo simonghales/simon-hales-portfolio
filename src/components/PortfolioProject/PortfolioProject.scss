@@ -1,0 +1,26 @@
+@import "styles/tools/tools.layout";
+
+.PortfolioProject
+{
+  height: 100vh;
+}
+
+.PortfolioProject__content
+{
+  @include mainPadding;
+  display:     flex;
+  height:      100%;
+  align-items: center;
+}
+
+.PortfolioProject__media
+{
+  width:         50%;
+  padding-right: 150px;
+}
+
+.PortfolioProject__info
+{
+  padding-left: 150px;
+  width:        50%;
+}
